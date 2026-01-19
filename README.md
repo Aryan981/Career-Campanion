@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Career Companion Agent
 
-## Getting Started
+A production-ready multi-agent AI system that helps users improve their careers.
 
-First, run the development server:
+## Features
+- **Resume Analysis**: Extract skills, experience, and projects.
+- **Target Role Interpretation**: Understand what specific roles require.
+- **Skill Gap Reasoning**: Identify the delta between your resume and target role.
+- **Career Roadmap**: Personalised week-by-week learning plan.
+- **Interview Simulation**: Practice questions tailored to your profile.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- **Backend**: FastAPI, Pydantic AI, Loguru.
+- **Frontend**: Next.js 14, Tailwind CSS, Lucide Icons, Framer Motion.
+- **Model**: OpenRouter (Gemini / Llama).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Backend
+1. `cd backend`
+2. `pip install -r requirements.txt`
+3. Create `.env` from `.env.example` and add your `OPENROUTER_API_KEY`.
+4. `python main.py`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend
+1. `cd frontend`
+2. `npm install`
+3. `npm run dev`
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Agent Architecture
+Built using **Pydantic AI** for strict validation, retries, and structured outputs. Each agent is specialized for a single part of the career growth journey.
