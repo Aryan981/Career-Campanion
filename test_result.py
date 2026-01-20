@@ -17,5 +17,13 @@ async def main():
         print(f"Result data: {result.data}")
     else:
         print("RESULT HAS NO DATA")
+    
+    if hasattr(result, 'output'):
+        print(f"Result output type: {type(result.output)}")
+        print(f"Result output: {result.output}")
 
-asyncio.run(main())
+async def main_wrapper():
+    await main()
+
+if __name__ == "__main__":
+    asyncio.run(main_wrapper())
